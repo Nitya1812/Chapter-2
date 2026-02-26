@@ -1,0 +1,83 @@
+📝 JavaScript Functions Worksheet
+
+1.
+Write a simple function called greet that prints "Hello, World!" to the console.
+ans--
+function greet() {
+  console.log("Hello, World!");
+}
+
+2.
+What is the difference between a parameter and an argument in a function?
+ans -- Parameter → A variable listed in the function definition.
+Argument → The actual value passed to the function when calling it.
+
+3.
+What will be the output of this code?
+
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3));
+
+ans -- 5
+4.
+How do you call (invoke) a function named showMessage?
+ans-- showMessage();
+
+Medium (5-7)
+5.
+Rewrite the following function as an arrow function:
+
+function square(x) {
+  return x * x;
+}
+
+ans-- const square = (x) => x * x;
+6.
+What will this code print? Explain why.
+
+function test() {
+  return;
+  console.log("Done");
+}
+console.log(test());
+
+ans-- undefined
+reason -- When JavaScript sees return;, it immediately exits the function , console.log("Done") never runs.
+-- Since no value is returned, the function returns undefined.
+7.
+Write a function expression (assigned to a variable) that multiplies two numbers and returns the result.
+
+ans -- const multiply = function(a, b) {
+            return a * b;
+        };
+Hard (8-10)
+8.
+Write a function isEven that returns true if its argument is an even number, and false otherwise.
+
+ans -- function isEven(num) {
+        return num % 2 === 0;
+       }
+9.
+What is the difference in how this works in a regular function vs. an arrow function?
+
+ans -- 
+--> Regular Function
+- this depends on how the function is called.
+- It refers to the object that calls the function.
+
+--> Arrow Function
+- this is taken from the surrounding (parent) scope.
+- It does NOT have its own this.
+
+10.
+Write a function factorial(n) that returns the factorial of n (e.g., factorial(5) returns 120).
+ans -- 
+function factorial(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
